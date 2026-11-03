@@ -1,0 +1,51 @@
+{
+  "name": "dsh-pixiv-viewer",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness 的 Pixiv 看图插件：左侧栏入口、缩略图浏览、搜索/标签筛选、R18 开关、大图查看、保存与账号同步收藏。Pixiv image viewer plugin for DeepSeek Harness.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "pixiv",
+    "viewer",
+    "image",
+    "看图"
+  ],
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "scripts": {
+    "check": "node --check lib/index.js && node --check lib/pixiv.js && node --check lib/routes.js && node --check lib/client.js"
+  },
+  "engines": {
+    "node": ">=22.19.0",
+    "dsh": ">=0.2.0-rc.1 <0.3.0"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "dependencies": {
+    "undici": "^7.0.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.2.0-rc.1 <0.3.0",
+    "react": "^18.2.0"
+  }
+}

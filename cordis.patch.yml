@@ -1,0 +1,12 @@
+# dsh-pixiv-viewer — bundle patch
+#
+# One Loader row. The host half registers the pixiv HTTP API routes under
+# /api/plugins/pixiv-viewer; the client half (./client.js) contributes the
+# sidebar entry and the main panel page.
+#
+# Disable without uninstalling:
+#   - id: pixiv-viewer
+#     disabled: true
+- insert:
+    - id: pixiv-viewer
+      name: 'dsh-pixiv-viewer'
