@@ -1,6 +1,6 @@
 {
   "name": "dsh-pixiv-viewer",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "DeepSeek Harness 的 Pixiv 看图插件：左侧栏入口、缩略图浏览、搜索/标签筛选、R18 开关、大图查看、保存与账号同步收藏。Pixiv image viewer plugin for DeepSeek Harness.",
   "type": "module",
   "license": "MIT",
